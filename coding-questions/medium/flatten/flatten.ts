@@ -20,10 +20,7 @@ export function flatten(value: any): Array<any> {
 
 export function flattenS(value: any): Array<any> {
   while (value.some(Array.isArray)) {
-    console.log('...', ...value)
     value = [].concat(...value);
-
-    console.log('value', value)
   }
 
   return value;
