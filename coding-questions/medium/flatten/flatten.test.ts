@@ -1,4 +1,4 @@
-import { flattenArrayInPlace as flatten } from "./flatten";
+import { flattenFlatMap as flatten } from "./flatten";
 
 describe("flatten array", () => {
   test("empty array", () => {

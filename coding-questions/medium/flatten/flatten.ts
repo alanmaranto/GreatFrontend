@@ -49,3 +49,11 @@ export function flattenArrayInPlace(value: Array<ArrayValue>): Array<any> {
   }
   return value;
 }
+
+// Solution 5: Recursive approaching using flatMap
+
+export function flattenFlatMap(value: Array<ArrayValue>): Array<any> {
+  return Array.isArray(value)
+    ? value.flatMap((item) => flattenFlatMap(item))
+    : value;
+}

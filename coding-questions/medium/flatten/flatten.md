@@ -20,3 +20,6 @@ Although a recursive approach always has the risk overflowing the call stack, as
 All the solutions we have seen so far are returning a new flattened array without mutating the original input array. Again, this is normally what you want.<br><br>
 However, the interviewer might ask you to implement an in-place solution that doesn't allocate extra memory. That is, a solution with a constant O(1) space complexity.<br><br>
 n this case, you will need to leverage array methods that mutate. There are 9 methods in total that mutate arrays: pop, push, reverse, shift, sort, splice, unshift, copyWithin and fill.<br><br>
+
+<h2>Solution 5: Recursive approaching using flatMap</h2>
+The flatMap function method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. By calling it recursively, we can flatten the entire array until it is only one level deep.<br><br>
